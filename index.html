@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title>SidekickJS</title>
+    <link rel="stylesheet" href="reveal/css/reveal.min.css">
+    <link rel="stylesheet" href="reveal/css/theme/solarized.css" id="theme">
+    <!-- <link rel="stylesheet" href="reveal/css/print/pdf.css"> -->
+
+    <!-- For syntax highlighting reveal/-->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <style>
+      .reveal section img.noborder { border: 0 }
+      h2.downcase { text-transform: none }
+    </style>
+</head>
+
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<section data-markdown><script type="text/template">
+
+
+  # SidekickJS
+
+  ### @timruffles
+  ### sidekickjs.com
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+  <h1>SidekickJS:<br />code quality for teams</h1>
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Code quality
+
+  - Code metrics & smells
+  - Style & WATs
+  - Testability
+  - Error tracking
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Why should you care?
+
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Feels good
+
+  - Feels good to be proud of your team's code
+  - Improved quality = improved morale
+  - Low quality = gumption trap
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Conversations
+
+  - Stops problems being forgotten - dashboard
+  - Can inspire questions - best way to do it?
+  - Data solves arguments
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # You look good
+
+  - Show off your code 
+  - Open source for fun & profit
+
+  <img width=200 src="clean.svg" class=noborder />
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Nudges your boss
+
+  - Refactoring is a hard sell
+  - If it's measurable it's concrete
+  - Demonstrate your impact
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # What does it do?
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ![Dash](demo.png)
+
+  ## Dashboard
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ![DRY](dry.png)
+
+  ## DRY - fuzzy dupe detector
+
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ![DRY](dry-detail.png)
+
+  ## Dupe drill-down
+
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ![Complexity](functions.png)
+
+  ## KISS - track complexity
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ![WAT](wat.png)
+
+  ## Linting for style + WATs
+
+</script></section>
+
+
+
+<section data-markdown><script type="text/template">
+
+  ![Pull-request](prs.png)
+
+  ## Pull request analysis
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  # How to use metrics?
+
+  - as an ∞ junior, ∞ concientious team-member
+  - you are the expert
+  - keeps you honest - should be a good reason to over-ride
+
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Future cool things
+
+  - Coffeescript
+  - Backbone/Angular/Ember/jQuery etc specific
+  - Todo/Fixme tracking
+  - Object-level metrics (coupling etc)
+  - You tell me!
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Free for open-source
+
+  - just create an account and add your repo
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # Alternatives
+
+  - JSHint standalone
+  - Complexity Report or JSHint - complexity
+  - Plato - static HTML reporting
+  - Repetition - port of Java CPD?
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  # LondonJS secret offer
+
+  - 3 months for price of 1 to say thanks for being early adopter
+  
+  <h2 class=downcase>sidekickjs.com/ldnjs</h2>
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Thanks!
+
+  @timruffles / sidekickjs.com
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  # Tools
+
+  - ESPrima - fantastic Mozilla-AST API parser
+  - JSHint
+  - Coffeescript + Ruby for analysis
+  - Rails for CRUD
+  - Chef for config management
+  - Vagrant for dev box
+
+</script></section>
+
+
+
+<!-- end of wrappers -->
+</div>
+</div>
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.min.js"></script>
+<script>
+  Reveal.initialize({
+
+    // Display controls in the bottom right corner
+    controls: false,
+
+    // Display a presentation progress bar
+    progress: true,
+
+    // Push each slide change to the browser history
+    history: true,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    center: false,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Apply a 3D roll to links on hover
+    rollingLinks: false,
+
+    // Transition style
+    transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interreveal/pret Markdown in <section> elements
+        { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntareveal/x highlight for <code> elements
+        { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom reveal/in and out with Alt+click
+        { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speakreveal/er notes
+        { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remotreveal/e control your reveal.js presentation using a touch device
+        // { src: 'reveal/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+
+  });
+</script>
+</body>
