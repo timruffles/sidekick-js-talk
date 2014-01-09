@@ -2,16 +2,34 @@
 <head>
     <meta charset="utf-8" />
     <title>SidekickJS</title>
-    <link rel="stylesheet" href="reveal/css/reveal.min.css">
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
     <link rel="stylesheet" href="reveal/css/theme/solarized.css" id="theme">
     <!-- <link rel="stylesheet" href="reveal/css/print/pdf.css"> -->
 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- For syntax highlighting reveal/-->
     <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
     <style>
-      .reveal section img.noborder { border: 0 }
-      h2.downcase { text-transform: none }
+      #first {
+        top: -65%;
+      }
+      .reveal .slides img {
+        background: none;
+      }
+      .reveal h1, .reveal h2, .reveal h3 {
+        text-transform: none;
+      }
+      #first h2 {
+        text-transform: uppercase;
+      }
     </style>
+
+
 </head>
 
 <body>
@@ -19,41 +37,161 @@
 <div class="reveal">
 <div class="slides">
 
-<section data-markdown><script type="text/template">
+<section data-markdown data-state="highlight" id=first><script type="text/template">
 
 
-  # SidekickJS
+  ## Bootstrapping SidekickJS
 
-  ### @timruffles
+  ![sidekick js](top_image.png)
+
+  ### @timruffles / @sidekicksrc
   ### sidekickjs.com
 
 </script></section>
 
+<section data-markdown data-state="highlight"><script type="text/template">
+  # SidekickJS
+  ## Be proud of your code
+</script></section>
+
+
 <section data-markdown><script type="text/template">
-  <h1>SidekickJS:<br />code quality for teams</h1>
+
+  ## Rambling will cover:
+
+  - Story so far
+  - Why?
+  - WTF?
+  - How - techy
+  - How - boostrapping
+
+</script></section>
+
+<section data-markdown >><script type="text/template">
+
+  ## Story so far
+
+</script></section>
+
+<section data-markdown ><script type="text/template">
+
+  ## Escape plan: contracting
+
+</script></section>
+
+
+<section data-markdown ><script type="text/template">
+
+  ## Then... build a game?
+
+</script></section>
+
+
+<section data-markdown ><script type="text/template">
+
+  ## Game sounds short-term
+
+</script></section>
+
+
+<section data-markdown ><script type="text/template">
+
+  ## Saw a tool for ruby
+
+</script></section>
+
+<section data-markdown ><script type="text/template">
+
+  ## Why not one for JS?
+
+</script></section>
+
+<section data-markdown ><script type="text/template">
+
+  ## Seems to have customers... so BUILD!
+
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## No available co-founders
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Swore I'd not solo-found again
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## So I did it anyway
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## v1 'done' on month 4
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Showed first customers on month 6
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## They really didn't think it did much
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Met potential co-founder
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Shook hands on cofounding/investment on Jan 6th 2014!
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Working with first employee this week
+</script></section>
+
+<section data-markdown ><script type="text/template">
+  ## Now: finish and polish for closed beta v2
+</script></section>
+
+<section data-markdown data-state=highlight><script type="text/template">
+  ## Why?
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-  ## Code quality
-
-  - Code metrics & smells
-  - Style & WATs
-  - Testability
-  - Error tracking
+  ## Make good code easy: in teams, in OSS
 
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-  # Why should you care?
+  ## Code quality challenges
 
+  - Lots of manual work
+  - Code-review can upset people
+  - Lots of metrics hard to 'see by eye': structual repetition
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## Solution: a tool
+
+  - Automate
+  - Objective: same for everbody
+  - Doesn't miss things
 
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-  # Feels good
+  ## Why should you care?
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Feels good
 
   - Feels good to be proud of your team's code
   - Improved quality = improved morale
@@ -63,7 +201,7 @@
 
 <section data-markdown><script type="text/template">
 
-  # Conversations
+  ## Prompts
 
   - Stops problems being forgotten - dashboard
   - Can inspire questions - best way to do it?
@@ -73,7 +211,7 @@
 
 <section data-markdown><script type="text/template">
 
-  # You look good
+  ## You look good
 
   - Show off your code 
   - Open source for fun & profit
@@ -84,7 +222,7 @@
 
 <section data-markdown><script type="text/template">
 
-  # Nudges your boss
+  ## Nudges your boss
 
   - Refactoring is a hard sell
   - If it's measurable it's concrete
@@ -92,9 +230,40 @@
 
 </script></section>
 
+
+<section data-markdown><script type="text/template">
+  # How to use metrics?
+</script></section>
+
 <section data-markdown><script type="text/template">
 
-  # What does it do?
+  ## The Sidekick view
+
+  - as an ∞ junior, ∞ concientious team-member
+  - you are the expert
+  - keeps you honest - should be a good reason to over-ride
+
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## My goals
+
+  - Code metrics & smells
+  - Style & WATs
+  - Testability
+  - Error tracking
+  - API specific: callbacks, promises
+  - Library specific: idiomatic use of Angular/jQuery etc
+  - Security
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## What does it do so far?
 
 </script></section>
 
@@ -141,6 +310,13 @@
 </script></section>
 
 
+<section data-markdown><script type="text/template">
+
+  ![Todos](todos.png)
+
+  ## Tracks TODOs + FIXMEs
+
+</script></section>
 
 <section data-markdown><script type="text/template">
 
@@ -153,53 +329,325 @@
 
 <section data-markdown><script type="text/template">
 
-  # How to use metrics?
+  ## SaaS
 
-  - as an ∞ junior, ∞ concientious team-member
-  - you are the expert
-  - keeps you honest - should be a good reason to over-ride
-
+  - So far just Github, will add others
+  - You authorise repo, it pulls down code and analyses
+  - Interested to see if people want self-hosting
 
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-  # Future cool things
+  ## Core metaphor: debt
+
+  - Avoids false positives: A+ grade for config files
+  - Avoid false negatives: B grade for code solving hard thing
+  - It's just a number: objective
+  - You can tune
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Future cool things
 
   - Coffeescript
   - Backbone/Angular/Ember/jQuery etc specific
-  - Todo/Fixme tracking
   - Object-level metrics (coupling etc)
   - You tell me!
 
 </script></section>
 
-<section data-markdown><script type="text/template">
+<section data-markdown data-state=highlight><script type="text/template">
 
-  # Free for open-source
-
-  - just create an account and add your repo
+  # How?
 
 </script></section>
 
 <section data-markdown><script type="text/template">
 
-  # Alternatives
+  ## Stack
 
-  - JSHint standalone
-  - Complexity Report or JSHint - complexity
-  - Plato - static HTML reporting
-  - Repetition - port of Java CPD?
+  - Boxes
+  - Analysis
+  - Workers
+  - Database(s)
+  - Server
+  - Front end
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## Stack
+
+  - Boxes: Chef + Vagrant
+  - Analysis: esprima + OSS
+  - Workers: resque (redis)
+  - Database(s): postgres + redis
+  - Server: nginx
+  - Front end: AngularJS for UI, Rails for more static stuff
 
 </script></section>
 
 <section data-markdown><script type="text/template">
+  ## Boxes: Chef + Vagrant
 
-  # LondonJS secret offer
+  - Chef: write code to manage server(s)
+  - Vagrant: easily manage VMs locally for development
+  - Whole dev env + production env is scripted
 
-  - 3 months for price of 1 to say thanks for being early adopter
+  ```bash
+  bash "install node packages" do
+    code """
+      set -e
+      cd #{current_path}
+      export HOME=#{node.app_user_home_directory}
+      chpst -u sidekick npm install
+    """
+  end
+  ```
+
+  ```bash
+  vagrant up && vagrant ssh
+  ```
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+  ## Experience: Chef + Vagrant
+
+  - Chef - I think docker will replace for 80% of work
+  - Ansible to fill in config-management for other 20%
+  - docker: git for servers, modify, commit, push, pull to deploy
+  - Vagrant: amazing, keep
+  - Debian: good to know packages are secure, but.. you'll need newer ones
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+  ## Analysis: esprima + OSS
+
+  - esprima gives you an abstract syntax tree
+  - e.g plain text to Javascript objects
+
+  ```bash
+  sidekick@vagrant:~/sidekick-dev$ esparse <(echo 'hello()')
+  {
+      "type": "Program",
+      "body": [
+          {
+              "type": "ExpressionStatement",
+              "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                      "type": "Identifier",
+                      "name": "hello"
+                  },
+                  "arguments": []
+              }
+          }
+      ]
+  }
+  ```
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+  ## Analysis: experience
+
+  - esprima is a joy to make tools with: js-todos
+  - JSHint is a blunt instrument - especially when you know JS well
+  - JSHint has bugs, and if you write a tool around they're your bugs
+  - JSHint: already customising, may switch to eshint
+
+  ```javascript
+  try {
+    var something = "a"
+  } catch(e) {
+  }
+  // jshint complains that 'something' is out of scope
+  cb(null,something)
+  ```
+
+
+</script></section>
+
+
+
+<section data-markdown><script type="text/template">
+  ## Workers: resque
+
+  - resque is a solid worker queue
+  - but: should have gone with storing JSON jobs
+  - will swap out with a generic queue, backed by redis
+  - modularity from queues never gets old
+
+  ```rb
+  Resque.enqueue GitClone, project.id
+
+  class GitClone
+    def self.perform
+    end
+  end
+  ```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+  ## Database(s): postgres + redis
+
+  - Postgres IS AWESOME!!!
+  - example: can easily run one DB per user
+  - JSON datatypes for queryable schemaless data
+  - redis: AK47 of key-value stores. Simple, not hard to keep working
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+  ## Server: nginx
+
+  - The boss
+  - Running node behind an nginx upstream, handles static etc
+
+  ```sh
+  upstream api_server {
+    server 127.0.0.1:<%= node.api_port %>;
+  }
+
+  server {
+    listen 443;
+    server_name <%= node.api_domain %>;
+
+    ssl on;
+    ssl_certificate /etc/nginx/ssl-unified.crt;
+    ssl_certificate_key /etc/nginx/ssl.key;
+
+    root <%= node.api_current_path %>/client/app;
+
+    ## serve static from nginx
+    try_files $uri/index.html $uri.html $uri @app;
+
+    location @app {
+      proxy_pass http://api_server;
+    }
+  ```
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+  ## Front end
   
-  <h2 class=downcase>sidekickjs.com/ldnjs</h2>
+  - AngularJS very productive (vs Backbone/Dojo/hand-roll)
+  - Rails: it's good at forms + validation + auth + migrations (Rails == Django == Play)
+  - Rails: need to migrate away from it's asset pipeline: slow
+
+</script></section>
+
+<section data-markdown data-state=highlight><script type="text/template">
+
+  # Bootstrap: how not to starve
+
+</script></section>
+
+
+<section data-markdown data-state=highlight><script type="text/template">
+
+  # LONDON IS EXPENSIVE!!!1!
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Freelancing
+
+  - Tip: do it in chunks
+  - e.g I worked for State.com for 20 days in a chunk
+  - Reduces switching pains
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Teaching
+
+  - Great thing about startups are: you can use cool new things!
+  - People want to learn about cool new things
+  - Was already teaching for ~12 months before, so just ramped up
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Human factors
+
+  - Make sure significant other is cool with it
+  - Be prepared for A LOT OF DOUBT
+  - It's really slow (Litmus got interesting ~5 years in)
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## How not to go mad
+
+  - Choose something you enjoy, in a market you like
+  - Go into it for the right reasons: if you want £££, work for a bank
+  - Don't compare yourself with other companies/people: it's intrinsic
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+
+  ## Launch immediately, just very slowly
+
+  - Get a page up day one, capture emails (I was slow)
+  - You can launch too early: you can't validate too early
+  - No point shoving people into a leaky funnel
+  - Therefore: 'launch' after you have customers!
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## Marketing a dev focussed SaaS
+
+  - Is easier: you are a dev!
+  - Write about the process
+  - Talk about the process
+  - Help people!
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## Bootstrapping a code-quality tool
+
+  - Quite a lot of work
+  - For not much reward
+  - YAY!
+
+</script></section>
+
+
+<section data-markdown><script type="text/template">
+
+  ## I'm building it for teams like yours
+
+  - Open-source or not
+  - OSS free, let's make OSS less work
+  - I'd love to come in and talk to you & your team
+
+  <br>
+
+  - Say hi: @timruffles
 
 </script></section>
 
@@ -208,20 +656,6 @@
   ## Thanks!
 
   @timruffles / sidekickjs.com
-
-</script></section>
-
-
-<section data-markdown><script type="text/template">
-
-  # Tools
-
-  - ESPrima - fantastic Mozilla-AST API parser
-  - JSHint
-  - Coffeescript + Ruby for analysis
-  - Rails for CRUD
-  - Chef for config management
-  - Vagrant for dev box
 
 </script></section>
 
